@@ -1,0 +1,19 @@
+********************************
+* SPC/E Water Molecule Topology
+********************************
+31  1
+
+MASS     1 HW     01.00800 H  ! water H
+MASS     2 OW     15.99940 O  ! water O
+
+RESI SOL         0.000 ! spce water model, generate using noangle nodihedral
+GROUP
+ATOM OW   OW     -0.8476
+ATOM HW1  HW      0.4238
+ATOM HW2  HW      0.4238
+BOND OW HW1 OW HW2
+!HW1 HW2   ! the last bond is needed for shake
+ANGLE HW1 OW HW2            ! required
+ACCEPTOR OW
+PATCHING FIRS NONE LAST NONE
+
