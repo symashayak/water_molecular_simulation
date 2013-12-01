@@ -6,7 +6,7 @@
 *
 31  1
 
-MASS     1 CG     39.94800 CG ! coarse-grained bead
+MASS     1 CG     18.0 CG ! coarse-grained bead
 
 RESI SOL          0.00 ! CG molecule
 GROUP
