@@ -1,0 +1,14 @@
+*> CHARMM22 All-Hydrogen Topology File for Proteins and Lipids <<
+*>>>>>> Includes phi, psi cross term map (CMAP) correction <<<<<<
+*>>>>>>>>>>>>>>>>>>>>>>   July 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+* All comments to ADM jr. via the CHARMM web site: www.charmm.org
+*               parameter set discussion forum
+*
+31  1
+
+MASS     1 CG     39.94800 CG ! coarse-grained bead
+
+RESI SOL          0.00 ! CG molecule
+GROUP
+ATOM CG  CG       0.00
+PATCHING FIRST NONE LAST NONE

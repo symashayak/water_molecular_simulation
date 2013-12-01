@@ -1,0 +1,9 @@
+! Sikandar Mashayak
+! December 1, 2013
+
+! CG is coarse-grained bead
+
+NBTABLE
+CG CG CGCG
+
+END
