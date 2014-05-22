@@ -1,0 +1,27 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+  1             1               no              1.0     1.0
+
+; Let first define some atoms we are going to use
+
+[ atomtypes ]
+;name        mass      charge     ptype            c6           c12
+   OW    15.99940       -0.8476   A     0.26187E-02   0.26307E-05
+   HW    1.00800        0.4238    A     0.00000E+00   0.00000E+00
+
+[moleculetype]
+SOL     1
+                                                                                
+[atoms]
+1     OW      1    SOL                  OW       1      -0.8476
+2     HW      1    SOL                  HW1      1      0.4238
+3     HW      1    SOL                  HW2      1      0.4238
+                                                                                
+[ settles ]
+; OW    funct   doh     dhh
+1       1       0.1     0.16333
+                                                                                
+[ exclusions ]
+1       2       3
+2       1       3
+3       1       2                                     

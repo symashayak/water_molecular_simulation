@@ -1,0 +1,61 @@
+! Sikandar Mashayak
+
+!HW is hydrogen from SPC/E
+!OW is oxygen from SPC/E
+
+BONDS
+
+!V(bond) = Kb(b - b0)**2
+!Kb: kcal/mole/A**2
+!b0: A
+!atom type Kb          b0
+
+HW   OW    600.000     1.000
+
+
+ANGLES
+
+!V(angle) = Ktheta(Theta - Theta0)**2
+!V(Urey-Bradley) = Kub(S - S0)**2
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!atom types     Ktheta    Theta0   Kub     S0
+
+HW   OW   HW    124.00    109.47
+
+
+DIHEDRALS
+
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!atom types             Kchi    n   delta
+
+IMPROPER
+
+!V(improper) = Kpsi(psi - psi0)**2
+!Kpsi: kcal/mole/rad**2
+!psi0: degrees
+!note that the second column of numbers (0) is ignored
+!atom types           Kpsi                   psi0
+
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5
+
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!atom  ignored    epsilon      Rmin/2   ignored   eps,1-4       Rmin/2,1-4
+
+HW     0.000000  -0.0000000000     0.00000000000
+OW     0.000000  -0.1553537284     1.77685742247
+
+HBOND CUTHB 0.5  ! If you want to do hbond analysis (only), then use
+                 ! READ PARAM APPEND CARD
+                 ! to append hbond parameters from the file: par_hbond.inp
+
+END
